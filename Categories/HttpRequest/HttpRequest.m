@@ -7,7 +7,7 @@
 //
 
 #import "HttpRequest.h"
-#import "AFNetworking.h"
+#import <AFNetworking/AFNetworking.h>
 
 /**
  *  是否开启https SSL 验证
@@ -24,56 +24,48 @@
 
 + (void)post:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    // 1.获得请求管理者
-    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-    // 2.申明返回的结果是text/html类型
-    mgr.responseSerializer = [AFHTTPResponseSerializer serializer];
-    // 3.设置超时时间为10s
-    mgr.requestSerializer.timeoutInterval = 10;
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer.timeoutInterval = 20;
     
-    // 加上这行代码，https ssl 验证。
-    if(openHttpsSSL)
-    {
-        [mgr setSecurityPolicy:[self customSecurityPolicy]];
+    if (openHttpsSSL) {
+        [manager setSecurityPolicy:[self customSecurityPolicy]];
     }
     
-    // 4.发送POST请求
-    [mgr POST:url parameters:params
-      success:^(AFHTTPRequestOperation *operation, id responseObj) {
-          if (success) {
-              success(responseObj);
-          }
-      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-          if (failure) {
-              failure(error);
-          }
-      }];
+    [manager POST:@"http://example.com/resources.json" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        if (error) {
+            failure(error);
+        }
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 + (void)get:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    // 1.获得请求管理者
-    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-    // 2.申明返回的结果是text/html类型
-    mgr.responseSerializer = [AFHTTPResponseSerializer serializer];
-    // 3.设置超时时间为10s
-    mgr.requestSerializer.timeoutInterval = 10;
     
-    // 加上这行代码，https ssl 验证。
-    if(openHttpsSSL)
-    {
-        [mgr setSecurityPolicy:[self customSecurityPolicy]];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer.timeoutInterval = 20;
+    
+    if (openHttpsSSL) {
+        [manager setSecurityPolicy:[self customSecurityPolicy]];
     }
     
-    // 4.发送GET请求
-    [mgr GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObj){
+    [manager GET:@"http://example.com/resources.json" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         if (success) {
-            success(responseObj);
+            success(responseObject);
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
         if (error) {
             failure(error);
         }
+        NSLog(@"Error: %@", error);
     }];
 }
 

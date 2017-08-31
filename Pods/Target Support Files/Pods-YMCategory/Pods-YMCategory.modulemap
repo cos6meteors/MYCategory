@@ -1,0 +1,6 @@
+framework module Pods_YMCategory {
+  umbrella header "Pods-YMCategory-umbrella.h"
+
+  export *
+  module * { export * }
+}
