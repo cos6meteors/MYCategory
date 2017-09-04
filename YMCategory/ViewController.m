@@ -33,9 +33,9 @@
     NSString *TWITTERFON_FORM_BOUNDARY = @"AaB03x";
     
     //分界线 --AaB03x
-    NSString *MPboundary=[[NSString alloc]initWithFormat:@"--%@",TWITTERFON_FORM_BOUNDARY];
+    NSString *MPboundary=[[NSString alloc] initWithFormat:@"--%@",TWITTERFON_FORM_BOUNDARY];
     //结束符 AaB03x--
-    NSString *endMPboundary=[[NSString alloc]initWithFormat:@"%@--",MPboundary];
+    NSString *endMPboundary=[[NSString alloc] initWithFormat:@"%@--",MPboundary];
     
     NSMutableString *body=[[NSMutableString alloc] init];
     //添加分界线，换行
@@ -73,7 +73,6 @@
     NSMutableDictionary *responseDict = [NSMutableDictionary dictionary];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         //网络请求失败
-        
         if (error != nil) {
             return;
         }

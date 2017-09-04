@@ -23,6 +23,7 @@
 		009A7BFC1F57E81900E17595 /* NSString+time.m in Sources */ = {isa = PBXBuildFile; fileRef = 009A7BF01F57E81800E17595 /* NSString+time.m */; };
 		009A7BFD1F57E81900E17595 /* NSMutableURLRequest+PostFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 009A7BF31F57E81900E17595 /* NSMutableURLRequest+PostFile.m */; };
 		009A7BFE1F57E81900E17595 /* UILabel+VerticalLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 009A7BF61F57E81900E17595 /* UILabel+VerticalLabel.m */; };
+		00EC7E3B1F5D3AB4007C26FC /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EC7E3A1F5D3AB4007C26FC /* UIImage+Color.m */; };
 		FA3F1BDDB1012EAE789880D3 /* Pods_YMCategory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDD556D87D1FEE96305057D /* Pods_YMCategory.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,8 @@
 		009A7BF31F57E81900E17595 /* NSMutableURLRequest+PostFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+PostFile.m"; sourceTree = "<group>"; };
 		009A7BF51F57E81900E17595 /* UILabel+VerticalLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalLabel.h"; sourceTree = "<group>"; };
 		009A7BF61F57E81900E17595 /* UILabel+VerticalLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalLabel.m"; sourceTree = "<group>"; };
+		00EC7E391F5D3AB4007C26FC /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		00EC7E3A1F5D3AB4007C26FC /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		032488E9ECCA9AB34C291F4D /* Pods-YMCategory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMCategory.release.xcconfig"; path = "Pods/Target Support Files/Pods-YMCategory/Pods-YMCategory.release.xcconfig"; sourceTree = "<group>"; };
 		25D34692E7EE24981913BC6B /* Pods-YMCategory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMCategory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YMCategory/Pods-YMCategory.debug.xcconfig"; sourceTree = "<group>"; };
 		5EDD556D87D1FEE96305057D /* Pods_YMCategory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YMCategory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +178,7 @@
 		009A7BDE1F57E81800E17595 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				00EC7E381F5D3AB4007C26FC /* Color2Image */,
 				009A7BDF1F57E81800E17595 /* HexToUIColor */,
 				009A7BE21F57E81800E17595 /* HttpRequest */,
 				009A7BE51F57E81800E17595 /* JSONStingToDictionaryAndArray */,
@@ -257,6 +261,15 @@
 				009A7BF61F57E81900E17595 /* UILabel+VerticalLabel.m */,
 			);
 			path = VerticalLabel;
+			sourceTree = "<group>";
+		};
+		00EC7E381F5D3AB4007C26FC /* Color2Image */ = {
+			isa = PBXGroup;
+			children = (
+				00EC7E391F5D3AB4007C26FC /* UIImage+Color.h */,
+				00EC7E3A1F5D3AB4007C26FC /* UIImage+Color.m */,
+			);
+			path = Color2Image;
 			sourceTree = "<group>";
 		};
 		40595266E0318DFD8F5AACAC /* Frameworks */ = {
@@ -472,6 +485,7 @@
 				009A7BFE1F57E81900E17595 /* UILabel+VerticalLabel.m in Sources */,
 				009A7BAD1F57E7B900E17595 /* main.m in Sources */,
 				009A7BF91F57E81900E17595 /* NSString+MEJSON.m in Sources */,
+				00EC7E3B1F5D3AB4007C26FC /* UIImage+Color.m in Sources */,
 				009A7BFA1F57E81900E17595 /* UIImageView+CornerRadius.m in Sources */,
 				009A7BFD1F57E81900E17595 /* NSMutableURLRequest+PostFile.m in Sources */,
 			);
