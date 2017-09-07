@@ -11,6 +11,7 @@
 		009450DE1F61286500CD2ECC /* UIButton+Shade.m in Sources */ = {isa = PBXBuildFile; fileRef = 009450DD1F61286500CD2ECC /* UIButton+Shade.m */; };
 		009450E21F61297A00CD2ECC /* NSData+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 009450E11F61297A00CD2ECC /* NSData+Encryption.m */; };
 		009450E61F612F1100CD2ECC /* UIImage+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = 009450E51F612F1100CD2ECC /* UIImage+Compression.m */; };
+		009450EA1F613BF000CD2ECC /* NSString+SizeToFit.m in Sources */ = {isa = PBXBuildFile; fileRef = 009450E91F613BF000CD2ECC /* NSString+SizeToFit.m */; };
 		009A7BAD1F57E7B900E17595 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 009A7BAC1F57E7B900E17595 /* main.m */; };
 		009A7BB01F57E7B900E17595 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 009A7BAF1F57E7B900E17595 /* AppDelegate.m */; };
 		009A7BB31F57E7B900E17595 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 009A7BB21F57E7B900E17595 /* ViewController.m */; };
@@ -57,6 +58,8 @@
 		009450E11F61297A00CD2ECC /* NSData+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encryption.m"; sourceTree = "<group>"; };
 		009450E41F612F1100CD2ECC /* UIImage+Compression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Compression.h"; sourceTree = "<group>"; };
 		009450E51F612F1100CD2ECC /* UIImage+Compression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Compression.m"; sourceTree = "<group>"; };
+		009450E81F613BF000CD2ECC /* NSString+SizeToFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SizeToFit.h"; sourceTree = "<group>"; };
+		009450E91F613BF000CD2ECC /* NSString+SizeToFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SizeToFit.m"; sourceTree = "<group>"; };
 		009A7BA81F57E7B900E17595 /* YMCategory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMCategory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		009A7BAC1F57E7B900E17595 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		009A7BAE1F57E7B900E17595 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -158,6 +161,15 @@
 			path = ImageCompression;
 			sourceTree = "<group>";
 		};
+		009450E71F613BF000CD2ECC /* StringSizeToFit */ = {
+			isa = PBXGroup;
+			children = (
+				009450E81F613BF000CD2ECC /* NSString+SizeToFit.h */,
+				009450E91F613BF000CD2ECC /* NSString+SizeToFit.m */,
+			);
+			path = StringSizeToFit;
+			sourceTree = "<group>";
+		};
 		009A7B9F1F57E7B800E17595 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +238,7 @@
 		009A7BDE1F57E81800E17595 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				009450E71F613BF000CD2ECC /* StringSizeToFit */,
 				009450E31F612EEC00CD2ECC /* ImageCompression */,
 				009450DF1F61297A00CD2ECC /* DataEncryption */,
 				009450DB1F61286500CD2ECC /* ShadeButton */,
@@ -529,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				009A7BB31F57E7B900E17595 /* ViewController.m in Sources */,
+				009450EA1F613BF000CD2ECC /* NSString+SizeToFit.m in Sources */,
 				009A7BF71F57E81900E17595 /* UIColor+color.m in Sources */,
 				009450DA1F6120AF00CD2ECC /* UIImageView+CornerRadius.m in Sources */,
 				009450DE1F61286500CD2ECC /* UIButton+Shade.m in Sources */,
