@@ -17,6 +17,6 @@
  @param color UIColor
  @return UIImage
  */
-+ (UIImage *)imageWithColor:(UIColor *)color;
++ (UIImage *)imageWithColor:(UIColor *)color frame:(CGRect)frame;
 
 @end
